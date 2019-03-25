@@ -1,0 +1,9 @@
+<ul>
+    <li 
+    [class.selected]="selectedName === item"
+    (click)="setSelectedItem(item)"
+    *ngFor="let item of names;let i=index">
+      <button (click)="deleteName($event, i)">X</button>
+      {{item}}</li>
+  </ul>
+  

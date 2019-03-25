@@ -1,0 +1,31 @@
+<table class="blueTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Language</th>
+      <th>Url</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      [class.selected]="show === selectedShow"
+    *ngFor="let show of shows"
+      (click)="selectShow(show)"
+    >
+      <td>{{show.name}}
+          {{'aaa' | test}}
+
+      </td>
+      <td>
+        <img class="medium" [src]="show.image.medium" />
+      </td>
+      <td>
+        {{show.language}}
+      </td>
+      <td>
+        <a [href]="show.url" target="_blank">Go to ...</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

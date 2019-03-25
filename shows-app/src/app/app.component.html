@@ -1,0 +1,12 @@
+<div class="page">
+  <div class="container">
+    <app-show-list [shows]="shows" [selectedShow]="selectedShow" (showSelectionRequested)="setSelectedShow($event)">
+    </app-show-list>
+  </div>
+  <div *ngIf="selectedShow">
+    <h2>{{selectedShow?.name}}</h2>
+    <div>
+      <img [src]="selectedShow?.image.original" />
+    </div>
+  </div>
+</div>

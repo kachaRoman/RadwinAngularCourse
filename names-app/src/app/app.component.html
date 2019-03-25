@@ -1,0 +1,5 @@
+<app-name-list [names]="customers" 
+(nameSelected)="setSelectedName($event)" 
+[selectedName]="selectedName">
+</app-name-list>
+<h2>Selected name : {{selectedName}}</h2>
