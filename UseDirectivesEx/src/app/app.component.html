@@ -1,0 +1,16 @@
+<h1 [appTest]="color">{{title}}</h1>
+<ul>
+  <li appTest *ngFor="let a of arr" hoverColor='pink'>{{a}}</li>
+</ul>
+
+<div>
+  <input
+  (error)="showError($event)"
+  type="text" appOnlyHebrew />
+
+</div>
+<div>
+  <textarea appTest="red" appOnlyHebrew></textarea>
+</div>
+<button (click)="addNewItem()">
+  Add To list</button>
