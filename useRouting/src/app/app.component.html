@@ -1,0 +1,29 @@
+<h1>My App
+</h1>
+<h2 *ngIf="isLoading">Loading......</h2>
+<div>
+  <div>
+    <a routerLink="/login">Login</a> |
+    <a routerLink="/users">Users</a> |
+    <a routerLink="/parent">parent</a> |
+    <a routerLink="/admin">Admin</a> |
+
+
+  </div>
+  <a routerLink="/home">Home</a> |
+  <a routerLink="/home2">Home 2</a> |
+
+  <a [routerLink]="['/about']">About</a>|
+  <a routerLink="/kefel">Kefel</a> |
+  <a routerLink="/result/100/76">100 * 76</a> |
+  <a routerLink="/result/95/6" [queryParams]="{message: 'fromLink'}">95 * 6</a> |
+
+  <button (click)="redirctTo('home')"> Go To Home</button> |
+  <button (click)="redirctTo('about')">Go To about</button> |
+
+
+</div>
+<h2>
+  <marquee>Text Text Text Text Text Text Text Text Text Text </marquee>
+</h2>
+<router-outlet></router-outlet>
